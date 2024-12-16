@@ -25,3 +25,6 @@ what is the standard C++ way to implement _BitScanForward?
 
 ###
 Creaate a headerfile that defines a  class for a mandelbrot set
+
+###
+Any suggestions for this file?
