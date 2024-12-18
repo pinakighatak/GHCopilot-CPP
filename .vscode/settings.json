@@ -8,5 +8,8 @@
             ],
             "debugConfig": "Test Config"
         }
-    ]
+    ],
+    "files.associations": {
+        "stdexcept": "cpp"
+    }
 }

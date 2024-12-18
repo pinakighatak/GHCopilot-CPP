@@ -28,3 +28,7 @@ Creaate a headerfile that defines a  class for a mandelbrot set
 
 ###
 Any suggestions for this file?
+
+###
+Implement the RSA class methods in the Pinaki.cpp file.
+

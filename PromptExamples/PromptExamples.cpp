@@ -7,6 +7,7 @@
 #include "Calculator.h"
 #include "termcolor.hpp" // Include the termcolor header
 #include "Mandelbrot.h" // Include the Mandelbrot header
+#include <BatEncryption.hpp>
 
 
 int main()
@@ -59,22 +60,49 @@ int main()
     }
 
 	//Instantiate the Mandelbrot object with width, height, and maxIterations and call the generate method
-
 	Mandelbrot mandelbrot(80, 40, 100);
 	mandelbrot.generate();
-
-	//Get the iterations and print them
+	//Get the iterations and print the Mandelbrot set
 	const std::vector<int>& iterations = mandelbrot.getIterations();
 	for (int y = 0; y < 40; ++y) {
 		for (int x = 0; x < 80; ++x) {
 			int iter = iterations[y * 80 + x];
-			char c = (iter == 100) ? '#' : '.';
-			std::cout << c;
+			if (iter < 100) {
+				std::cout << termcolor::red << "*" << termcolor::reset;
+			}
+			else {
+				std::cout << " ";
+			}
 		}
 		std::cout << std::endl;
 	}
-    return 0;
+	return 0;
 
+    // Implement the BatEncryption class and call the methods
+
+    // Instantiate the BatEncryption object
+    // Create a derived class that implements BatEncryption
+    class ConcreteBatEncryption : public BatEncryption {
+    public:
+        // Implement all pure virtual functions here
+        void encrypt() override {
+            // Implementation of encrypt method
+        }
+        void decrypt() override {
+            // Implementation of decrypt method
+        }
+    };
+
+    // Instantiate the derived class
+    ConcreteBatEncryption batEncryption;
+    
+    
+
+
+
+
+
+	
 
 }
 
